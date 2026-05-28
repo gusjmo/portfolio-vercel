@@ -64,9 +64,18 @@ export default function Hero() {
           {...fadeUp(0)}
           className="mb-8 rounded-full p-[3px] bg-gradient-to-br from-[#6366f1] to-[#8b5cf6]"
         >
-          <div className="w-32 h-32 rounded-full bg-[#0a0a0f] flex items-center justify-center">
-            <span className="text-3xl font-bold bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent select-none">
-              GO
+          <div className="w-32 h-32 rounded-full bg-[#0a0a0f] flex items-center justify-center overflow-hidden relative">
+            <img 
+              src="/perfil.png" 
+              alt="Gusjmo" 
+              className="w-full h-full object-cover absolute inset-0 z-10"
+              onError={(e) => {
+                // Se a imagem não for encontrada, oculta a tag img para mostrar as iniciais por baixo
+                e.target.style.display = 'none';
+              }}
+            />
+            <span className="text-xl font-bold bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent select-none relative z-0">
+              Gusjmo
             </span>
           </div>
         </motion.div>

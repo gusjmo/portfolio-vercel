@@ -50,7 +50,7 @@ export default function Navbar() {
             className="font-mono font-bold text-xl select-none"
           >
             <span className="bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent">
-              {'<GO/>'}
+              {'<Gusjmo/>'}
             </span>
           </a>
 
