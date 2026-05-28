@@ -1,0 +1,48 @@
+const projetos = [
+  {
+    id: 1,
+    titulo: "Pokémon Super Trunfo",
+    categoria: "Jogos",
+    descricao: "Jogo de cartas Super Trunfo com Pokémon. IA com 3 níveis de dificuldade, multiplayer local, timer, sons e ranking S/A/B/C/D.",
+    stack: ["HTML", "CSS", "JavaScript", "PokéAPI"],
+    github: "https://github.com/gusjmo/pokemon-trunfo",
+    demo: "",
+    destaque: true,
+    cor: "#f59e0b",
+  },
+  {
+    id: 2,
+    titulo: "Landing Pages — Az1",
+    categoria: "Web",
+    descricao: "Desenvolvimento de landing pages de alta conversão para clientes reais da Az1 Agência Digital.",
+    stack: ["React", "HTML", "CSS", "JavaScript"],
+    github: "",
+    demo: "",
+    destaque: false,
+    cor: "#6366f1",
+  },
+  {
+    id: 3,
+    titulo: "Framework de Testes QA",
+    categoria: "QA",
+    descricao: "Framework de automação de testes com Pytest, aplicando princípios de TDD e código limpo para validação de fluxos de sistemas.",
+    stack: ["Python", "Pytest"],
+    github: "",
+    demo: "",
+    destaque: false,
+    cor: "#10b981",
+  },
+  {
+    id: 4,
+    titulo: "Plataforma E-commerce",
+    categoria: "Web",
+    descricao: "Plataforma de e-commerce completa com integração de serviços externos e fluxo de pagamento.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    github: "",
+    demo: "",
+    destaque: false,
+    cor: "#6366f1",
+  },
+];
+
+export default projetos;

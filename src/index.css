@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== CSS Variables ===== */
+:root {
+  --dark-bg: #0a0a0f;
+  --dark-card: #1e1e2e;
+  --dark-border: #2a2a3a;
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+  --accent-violet: #8b5cf6;
+  --accent-rose: #f43f5e;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --glass-bg: rgba(30, 30, 46, 0.6);
+  --glass-border: rgba(42, 42, 58, 0.5);
+}
+
+/* ===== Base Styles ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-border) var(--dark-bg);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background-color: rgba(99, 102, 241, 0.3);
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: rgba(99, 102, 241, 0.3);
+  color: #fff;
+}
+
+/* ===== Typewriter Cursor ===== */
+@keyframes typewriter-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: var(--accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: typewriter-blink 0.8s step-end infinite;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  #cv {
+    display: block !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    padding: 0 !important;
+  }
+
+  .glass-card {
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* ===== Component Utilities ===== */
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-violet) 50%, var(--accent-rose) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+  }
+
+  /* Accent underline for links */
+  .accent-underline {
+    position: relative;
+  }
+
+  .accent-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-violet));
+    border-radius: 1px;
+    transition: width 0.3s ease;
+  }
+
+  .accent-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Section Title */
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-text-secondary text-lg md:text-xl max-w-2xl;
+  }
+}
+
+/* ===== Floating Orbs (Hero Background) ===== */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent);
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 350px;
+  height: 350px;
+  background: var(--accent-violet);
+  top: 50%;
+  right: -80px;
+  animation-delay: -2s;
+}
+
+.orb-3 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-rose);
+  bottom: -50px;
+  left: 30%;
+  animation-delay: -4s;
+}
+
+/* ===== Subtle Grid Background ===== */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ===== Focus Styles ===== */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===== Smooth Transitions ===== */
+a,
+button {
+  transition: all 0.2s ease;
+}
+
+/* ===== Responsive Typography ===== */
+@layer base {
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
