@@ -236,7 +236,9 @@ export default function CV() {
         {visible && (
           <motion.a
             href="/GujmoCV.pdf"
-            download
+            download="GujmoCV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="fixed bottom-8 right-8 z-50 group flex items-center gap-2 bg-accent text-white rounded-full p-4 shadow-lg shadow-accent/25 hover:scale-110 transition-transform"
             initial={{ opacity: 0, scale: 0.6 }}
             animate={{ opacity: 1, scale: 1 }}

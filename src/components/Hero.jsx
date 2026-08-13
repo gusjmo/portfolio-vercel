@@ -125,7 +125,9 @@ export default function Hero() {
           {/* Outline — CV */}
           <a
             href="/GujmoCV.pdf"
-            download
+            download="GujmoCV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-[#6366f1] px-6 py-3 text-sm font-semibold text-[#6366f1] transition-all duration-300 hover:bg-[#6366f1]/10 hover:shadow-[0_0_20px_rgba(99,102,241,0.25)] active:scale-95"
           >
             <Download size={18} />

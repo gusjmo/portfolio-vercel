@@ -83,8 +83,10 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <a
-            href="/cv-gustavo.pdf"
-            download
+            href="/GujmoCV.pdf"
+            download="GujmoCV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 rounded-lg bg-[#6366f1] px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#8b5cf6] hover:shadow-[0_0_24px_rgba(99,102,241,0.45)]"
           >
             <Download size={16} />
@@ -134,8 +136,10 @@ export default function Navbar() {
             })}
 
             <motion.a
-              href="/cv-gustavo.pdf"
-              download
+              href="/GujmoCV.pdf"
+              download="GujmoCV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
