@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-4 text-center">
         <p className="text-text-secondary text-sm">
           Feito com React ⚡ por{' '}
-          <span className="text-text-primary font-medium">Gustavo Oliveira</span>
+          <span className="text-text-primary font-medium">Gustavo Juvêncio</span>
         </p>
 
         <div className="flex items-center gap-4">
