@@ -33,9 +33,10 @@ const orbs = [
 
 export default function Hero() {
   const { text } = useTypewriter([
-    'Desenvolvedor de Software',
-    'Engenheiro de Software Jr',
-    'Criador da Az1 Agência Digital',
+    'Desenvolvedor Full Stack',
+    'Python · JS/TS · React · Node.js',
+    'Fundador da AZ1 Agência Digital',
+    'APIs REST · QA Automatizado · IA/LLM',
   ]);
 
   const scrollTo = (selector) => {
@@ -86,7 +87,7 @@ export default function Hero() {
           className="text-5xl md:text-7xl font-bold leading-tight"
         >
           <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-            Gustavo Oliveira
+            Gustavo Juvêncio
           </span>
         </motion.h1>
 
@@ -102,9 +103,9 @@ export default function Hero() {
         {/* Tech stack */}
         <motion.p
           {...fadeUp(0.45)}
-          className="mt-6 text-sm md:text-base text-gray-500 tracking-[0.25em] uppercase"
+          className="mt-6 text-sm md:text-base text-gray-500 tracking-[0.2em] uppercase font-medium"
         >
-          Python · React · APIs REST · Testes QA
+          Python · JavaScript/TypeScript · React · Node.js · APIs REST · IA/LLM
         </motion.p>
 
         {/* CTA buttons */}
@@ -123,7 +124,7 @@ export default function Hero() {
 
           {/* Outline — CV */}
           <a
-            href="/cv-gustavo.pdf"
+            href="/GujmoCV.pdf"
             download
             className="inline-flex items-center gap-2 rounded-lg border border-[#6366f1] px-6 py-3 text-sm font-semibold text-[#6366f1] transition-all duration-300 hover:bg-[#6366f1]/10 hover:shadow-[0_0_20px_rgba(99,102,241,0.25)] active:scale-95"
           >

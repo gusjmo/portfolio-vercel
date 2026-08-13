@@ -35,7 +35,20 @@ const fadeUp = {
   }),
 };
 
-const skills = ['Python', 'JavaScript', 'React', 'HTML/CSS', 'Git', 'Pytest', 'APIs REST'];
+const skills = [
+  'Python',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Node.js',
+  'Flask',
+  'APIs REST',
+  'Pytest',
+  'TDD / SDD',
+  'CI/CD (GitHub Actions)',
+  'IA & Prompt Eng.',
+  'Git / GitHub',
+];
 
 export default function CV() {
   const sectionRef = useRef(null);
@@ -83,60 +96,67 @@ export default function CV() {
           <motion.div variants={fadeUp} custom={2}>
             <SectionHeading icon={<User size={18} />} title="Resumo Profissional" />
             <p className="text-text-secondary text-sm leading-relaxed">
-              Desenvolvedor de software com experiência em Python, APIs REST e desenvolvimento
-              web. Criador da Az1 Agência Digital, com foco em soluções modernas e de alta
-              qualidade. Atualmente cursando Análise e Desenvolvimento de Sistemas na Faculdade
-              Impacta Tecnologia.
+              Desenvolvedor Full Stack com foco em Python, JavaScript/TypeScript, React, Node.js, Flask e APIs REST. Desenvolvo aplicações web e integrações com IA, aplicando testes automatizados com Pytest, TDD, CI/CD e GitHub Actions para entregar soluções mais confiáveis.
+            </p>
+            <p className="text-text-secondary text-sm leading-relaxed mt-2">
+              Possuo 10+ projetos práticos, incluindo o <strong>JobFit AI</strong> (SaaS de otimização de currículos e matching de vagas), suíte de testes de API de e-commerce e sistemas de CRM. Como fundador da <strong>AZ1 Agência Digital</strong>, desenvolvo soluções web e integrações sob medida.
             </p>
           </motion.div>
 
-          {/* Experiência */}
+          {/* Experiência / Projetos Técnicos */}
           <motion.div variants={fadeUp} custom={3}>
-            <SectionHeading icon={<Briefcase size={18} />} title="Experiência" />
-            <div className="border-l-2 border-accent/40 pl-4 ml-1">
-              <h4 className="text-text-primary font-semibold text-sm">
-                Desenvolvedor Full Stack —{' '}
-                <span className="text-accent">Az1 Agência Digital</span>
-              </h4>
-              <span className="text-xs text-text-secondary">2024 — Presente</span>
-              <ul className="mt-2 space-y-1 text-text-secondary text-sm list-disc list-inside">
-                <li>Desenvolvimento de landing pages responsivas e otimizadas</li>
-                <li>Criação de soluções web completas para clientes</li>
-                <li>Atendimento direto ao cliente e gestão de projetos</li>
-              </ul>
-            </div>
-          </motion.div>
+            <SectionHeading icon={<Briefcase size={18} />} title="Projetos & Experiência" />
+            <div className="space-y-6">
+              {/* AZ1 Agência Digital */}
+              <div className="border-l-2 border-accent/40 pl-4 ml-1">
+                <h4 className="text-text-primary font-semibold text-sm">
+                  Fundador & Desenvolvedor —{' '}
+                  <span className="text-accent">AZ1 Agência Digital</span>
+                </h4>
+                <span className="text-xs text-text-secondary">Dez de 2025 — Atual</span>
+                <ul className="mt-2 space-y-1.5 text-text-secondary text-xs sm:text-sm list-disc list-inside">
+                  <li>
+                    <strong className="text-text-primary">JobFit AI:</strong> desenvolvi SaaS de otimização de currículo e matching de vagas com IA.
+                  </li>
+                  <li>
+                    <strong className="text-text-primary">QA E-commerce API:</strong> suíte com 15+ testes em Pytest (JWT, CRUD, schema validation) e CI/CD via GitHub Actions.
+                  </li>
+                  <li>
+                    <strong className="text-text-primary">CRM Barbearia:</strong> sistema de agendamento e gestão de clientes em Python e Flask.
+                  </li>
+                  <li>
+                    <strong className="text-text-primary">Landing Pages:</strong> entregas de alta conversão (Studio Go Interiores em HTML/CSS/JS e LP B2B em React).
+                  </li>
+                  <li>
+                    <strong className="text-text-primary">Automação de Arquivos:</strong> organizador automático em Python (pathlib, shutil) com logs em CSV.
+                  </li>
+                </ul>
+              </div>
 
-          {/* Projetos Relevantes */}
-          <motion.div variants={fadeUp} custom={4}>
-            <SectionHeading icon={<FolderGit2 size={18} />} title="Projetos Relevantes" />
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                <span className="text-text-secondary">
-                  <strong className="text-text-primary">Pokémon Super Trunfo</strong> — Jogo web
-                  com IA e multiplayer
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                <span className="text-text-secondary">
-                  <strong className="text-text-primary">Framework de Testes QA</strong> —
-                  Automação com Pytest
-                </span>
-              </li>
-            </ul>
+              {/* Experiência Anterior */}
+              <div className="border-l-2 border-accent/40 pl-4 ml-1">
+                <h4 className="text-text-primary font-semibold text-sm">
+                  Logística, Vendas e Atendimento ao Cliente
+                </h4>
+                <span className="text-xs text-text-secondary">2010 — 2021 (Unival, Axxio, Softex, Brancaleone)</span>
+                <ul className="mt-2 space-y-1.5 text-text-secondary text-xs sm:text-sm list-disc list-inside">
+                  <li>Gerenciamento de estoque em grande escala (~800 mil peças) com acuracidade de dados.</li>
+                  <li>Cadastramento de 10 mil+ itens em CRM/e-commerce e atendimento a 500+ clientes.</li>
+                  <li>Gestão comercial do contato ao fechamento, gerando R$ 80k+ em vendas em um quadrimestre.</li>
+                </ul>
+              </div>
+            </div>
           </motion.div>
 
           {/* Formação */}
           <motion.div variants={fadeUp} custom={5}>
-            <SectionHeading icon={<GraduationCap size={18} />} title="Formação" />
+            <SectionHeading icon={<GraduationCap size={18} />} title="Formação Acadêmica" />
             <div className="border-l-2 border-accent/40 pl-4 ml-1">
               <h4 className="text-text-primary font-semibold text-sm">
                 Análise e Desenvolvimento de Sistemas
               </h4>
               <p className="text-text-secondary text-sm">Faculdade Impacta Tecnologia</p>
-              <span className="text-xs text-text-secondary">2023 — 2026</span>
+              <span className="text-xs text-text-secondary">Fev. 2023 — Jun. 2026</span>
             </div>
           </motion.div>
         </div>
@@ -160,10 +180,14 @@ export default function CV() {
 
           {/* Certificações */}
           <motion.div variants={fadeUp} custom={4}>
-            <SectionHeading icon={<Award size={18} />} title="Certificações" />
-            <p className="text-text-secondary text-sm">
-              <strong className="text-text-primary">DIO.me</strong> — Cursos de desenvolvimento
-            </p>
+            <SectionHeading icon={<Award size={18} />} title="Certificações (DIO)" />
+            <ul className="space-y-1.5 text-xs sm:text-sm text-text-secondary list-disc list-inside">
+              <li>Fundamentos de Banco de Dados e SQL</li>
+              <li>Tratamento de Exceções e Depuração em Python</li>
+              <li>Trabalhando com Arquivos e Dados Externos em Python</li>
+              <li>Programação Orientada a Objetos com Python</li>
+              <li>Copiloto Microsoft para Consultas SQL</li>
+            </ul>
           </motion.div>
 
           {/* Idiomas */}
@@ -211,17 +235,17 @@ export default function CV() {
       <AnimatePresence>
         {visible && (
           <motion.a
-            href="/cv-gustavo.pdf"
+            href="/GujmoCV.pdf"
             download
             className="fixed bottom-8 right-8 z-50 group flex items-center gap-2 bg-accent text-white rounded-full p-4 shadow-lg shadow-accent/25 hover:scale-110 transition-transform"
             initial={{ opacity: 0, scale: 0.6 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.6 }}
-            title="Baixar PDF"
+            title="Baixar PDF do CV"
           >
             <Download size={20} />
             <span className="max-w-0 overflow-hidden group-hover:max-w-[8rem] transition-all duration-300 text-sm font-semibold whitespace-nowrap">
-              Baixar PDF
+              Baixar CV PDF
             </span>
           </motion.a>
         )}

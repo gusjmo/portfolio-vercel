@@ -2,20 +2,37 @@ import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const skills = [
-  { name: 'HTML/CSS', level: 85 },
-  { name: 'Python', level: 80 },
-  { name: 'JavaScript', level: 75 },
-  { name: 'APIs REST', level: 75 },
-  { name: 'Git/GitHub', level: 75 },
-  { name: 'React', level: 70 },
-  { name: 'Pytest/QA', level: 65 },
+  { name: 'Python', level: 90 },
+  { name: 'JavaScript / TypeScript', level: 85 },
+  { name: 'React & Node.js', level: 80 },
+  { name: 'APIs REST & Flask', level: 85 },
+  { name: 'Pytest & QA Automatizado', level: 85 },
+  { name: 'IA, LLMs & Prompt Eng.', level: 80 },
+  { name: 'Git, CI/CD & GitHub Actions', level: 80 },
 ];
 
-const techChips = ['Vercel', 'Google Cloud', 'Figma', 'Flask', 'Django'];
+const techChips = [
+  'Python',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Node.js',
+  'Flask',
+  'Pytest',
+  'TDD / SDD',
+  'JWT',
+  'CI/CD',
+  'GitHub Actions',
+  'GenAI / LLM',
+  'Git',
+  'HTML5',
+  'CSS3',
+  'SEO',
+];
 
 function getBarColor(level) {
-  if (level >= 80) return '#10b981';
-  if (level >= 70) return '#6366f1';
+  if (level >= 85) return '#10b981';
+  if (level >= 80) return '#6366f1';
   return '#8b5cf6';
 }
 
@@ -60,15 +77,22 @@ function SkillBar({ name, level }) {
 
 function HighlightedBio() {
   const highlights = [
+    'Desenvolvedor Full Stack',
     'Python',
+    'JavaScript/TypeScript',
+    'React',
+    'Node.js',
+    'Flask',
     'APIs REST',
-    'Az1 Agência Digital',
-    'Análise e Desenvolvimento de Sistemas',
-    'Faculdade Impacta Tecnologia',
+    'Pytest',
+    'CI/CD',
+    'AZ1 Agência Digital',
+    'JobFit AI',
+    'Faculdade Impacta',
   ];
 
   const text =
-    'Desenvolvedor com experiência prática em Python, APIs REST e desenvolvimento web. Criador da Az1 Agência Digital. Cursando Análise e Desenvolvimento de Sistemas na Faculdade Impacta Tecnologia. Apaixonado por tecnologia, automação e soluções que resolvem problemas reais.';
+    'Desenvolvedor Full Stack com foco em Python, JavaScript/TypeScript, React, Node.js, Flask e APIs REST. Desenvolvo aplicações web e integrações com IA, aplicando testes automatizados com Pytest, TDD, CI/CD e GitHub Actions para entregar soluções mais confiáveis. Fundador da AZ1 Agência Digital, criei o JobFit AI (SaaS com IA) e entreguei soluções sob medida para clientes. Formado em Análise e Desenvolvimento de Sistemas pela Faculdade Impacta.';
 
   // Build regex from highlights (escape special chars)
   const escaped = highlights.map((h) =>
